@@ -1,96 +1,71 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mirage-video/Mirage/main/assets/banner.jpg" width="100%">
+  <img src="banner.jpg" alt="Mirage" width="100%">
 </p>
 
-<h1 align="center">Mirage Team</h1>
+<h1 align="center">Mirage</h1>
 
 <p align="center">
-  <em>Building the future of open-source video generation</em>
+  <b>Open-source video generation research</b><br>
+  <i>Proving that open models can surpass closed-source alternatives</i>
 </p>
 
 <p align="center">
-  <a href="https://gomirage.ai">Website</a> •
-  <a href="https://x.com/gomirageai">Twitter</a> •
-  <a href="https://github.com/mirage-video/Mirage">Mirage Repository</a>
+  <a href="https://gomirage.ai"><img src="https://img.shields.io/badge/Website-gomirage.ai-green" alt="Website"></a>
+  <a href="https://x.com/gomirageai"><img src="https://img.shields.io/badge/Twitter-@gomirageai-1DA1F2?logo=twitter" alt="Twitter"></a>
+  <a href="https://github.com/mirage-video/Alice"><img src="https://img.shields.io/badge/Model-Alice-orange" alt="Alice"></a>
 </p>
 
 ---
 
-## Our Mission
+## Mission
 
-We believe in a future where AI-driven creativity is not confined to corporate silos. A future where high-fidelity, lifelike videos can be generated in seconds and made available to artists, educators, researchers, and individuals alike.
+We challenge the assumption that state-of-the-art AI requires closed development. Through rigorous methodology—consistency distillation, targeted data curation, and progressive training protocols—we demonstrate that open-source video generation can exceed proprietary systems.
 
-The field of AI video generation faces a profound divide. On one side stand closed-source models from industry leaders—remarkable in quality, yet inaccessible to the broader community. On the other, open-source alternatives that lag in temporal consistency, physical realism, and human rendering.
+Our work is guided by a simple principle: genuine innovation flourishes through collaboration and sharing. We release model weights and inference code to enable community adoption and iteration.
 
-**We built Mirage to close this gap.**
+## Research
 
----
+### Alice
 
-## What We've Built
+A 14-billion parameter text-to-video model achieving state-of-the-art quality through score-regularized consistency distillation (rCM).
 
-<table>
-<tr>
-<td align="center"><b>91.2</b><br>VBench Score</td>
-<td align="center"><b>14B</b><br>Parameters</td>
-<td align="center"><b>4</b><br>Inference Steps</td>
-<td align="center"><b>~8s</b><br>Generation Time</td>
-</tr>
-</table>
+| Metric | Result |
+|--------|--------|
+| VBench Score | **91.2** (surpassing Veo3 ~90, Sora2 ~88) |
+| Inference Steps | 4 (7× reduction from 50-step baseline) |
+| Resolution | 720p at 24fps |
 
-**Mirage** is a 14-billion parameter open-source video generation model that achieves state-of-the-art quality through consistency distillation with score regularization (rCM).
+**Key contributions:**
+- Demonstration that distillation can be quality-enhancing, not merely compression
+- Synthetic data curation pipeline with hard example mining for systematic failure modes
+- Progressive training protocol combining consistency enforcement with score regularization
 
-We demonstrate that distillation can *exceed* teacher model quality—improving VBench from 84.0 (Wan2.2) to 91.2, surpassing closed-source systems including Veo3 (~90) and Sora2 (~88).
+→ [Repository](https://github.com/mirage-video/Alice) · [Model Weights](https://huggingface.co/gomirageai/Alice-T2V-14B-MoE)
 
-### Key Innovations
+## Vision
 
-- **Mode-seeking distillation** concentrates probability mass on high-quality outputs
-- **Hard example mining** addresses systematic failures in physics, hands, and faces
-- **Consistency enforcement** eliminates "lucky path" dependence on specific noise samples
-- **7× speedup** over 50-step teacher models without quality degradation
+The quality gap between open and closed-source video generation is not a gap in architecture or scale—it is a gap in methodology. We aim to close it.
 
----
+We envision a future where high-quality video generation is accessible to all: researchers iterating on architectures, creators building new tools, developers integrating generation into applications. Infrastructure owned collectively, not gated behind APIs with opaque terms and shifting pricing.
 
-## The Team
+Open-source AI can have the same quality as closed AI. The difference is in who controls it.
 
-We are researchers and engineers united by a common belief: **genuine innovation flourishes through collaboration and sharing**.
+## Team
 
-Our team operates under codenames. No faces, no names, no LinkedIn profiles. The work speaks for itself.
+| Contributor | Role |
+|-------------|------|
+| [Wang Xiaoyu](https://github.com/wangxia0yu) | Lead Researcher |
+| [Chen Zhao](https://github.com/chenseris) | Systems Engineer |
 
-| Role | Focus |
-|------|-------|
-| **The Distiller** | Architecture & rCM implementation |
-| **Miner** | Synthetic data & hard-example mining |
-| **Enforcer** | Consistency training & stability |
-| **Oracle** | Motion & physics realism |
-| **Judge** | Benchmarking & human evaluation |
+## Links
 
-### Why Anonymous?
-
-Our project should be judged purely on weights and results, not personalities. We believe this approach:
-
-- Keeps focus on the science, not the scientists
-- Enables contribution from diverse backgrounds without bias
-- Protects our contributors in a complex regulatory landscape
-- Follows the tradition of anonymous research collectives that have pushed boundaries before
-
----
-
-## Our Philosophy
-
-> *"The gap between open and closed video generation is not a gap in architecture or scale—it is a gap in methodology."*
-
-We release everything openly: weights, code, pipelines, and scripts. This isn't compromise; it's a deliberate strategy to foster self-improving AI ecosystems where synthetic data becomes a tool for elevation, not degradation.
-
-The mirage of inaccessible excellence is over. **The reality begins now.**
+- **Website**: [gomirage.ai](https://gomirage.ai)
+- **Twitter/X**: [@gomirageai](https://x.com/gomirageai)
+- **Alice Repository**: [github.com/mirage-video/Alice](https://github.com/mirage-video/Alice)
+- **Model Weights**: [HuggingFace](https://huggingface.co/gomirageai/Alice-T2V-14B-MoE)
 
 ---
 
 <p align="center">
-  <a href="https://github.com/mirage-video/Mirage">
-    <img src="https://img.shields.io/github/stars/mirage-video/Mirage?style=social" alt="GitHub stars">
-  </a>
-</p>
-
-<p align="center">
-  <sub>Open source. Open weights. Open future.</sub>
+  <i>The gap between open and closed video generation is not insurmountable. We intend to prove it.</i>
 </p>
